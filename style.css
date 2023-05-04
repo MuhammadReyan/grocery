@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grocery-container {
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px black;
+    width: 500px;
+    padding: 20px;
+
+}
+
+.input-container {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+
+}
+
+.input-container>input {
+    padding: 5px 20px;
+    border: none;
+    background-color: rgba(212, 212, 230, 0.485);
+    border-radius: 5px 0px 0px 5px;
+    color: rgba(0, 0, 0, 0.524);
+}
+
+.submit {
+    padding: 4px 20px;
+    background-color: rgb(116, 133, 240);
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.todo-container {
+    overflow-y: scroll;
+}
+
+.todo-items-container {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+
+.todo-text {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.line-through {
+    text-decoration: line-through;
+    
+}
+
+.edit-button {
+    padding: 7px;
+    border: none;
+    
+    margin-top: 5%;
+    background: transparent;
+    color: green;
+    font-size: 1rem;
+}
+
+.delete-button {
+    padding: 7px;
+    border: none;
+    background: transparent;
+    
+    margin-top: 5%;
+    color: rgb(219, 31, 31);
+    font-size: 1rem;
+}
+.delete-button :hover{
+    color: rgb(108, 7, 7);
+}
+.edit-button:hover {
+    color: rgb(16, 151, 16);
+}
