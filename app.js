@@ -4,12 +4,27 @@
 let input_Field_Container = document.querySelector('#input-field-container')
 let submit = document.querySelector('.submit')
 let todo_container = document.querySelector('.todo-container')
+let clearBtn = document.querySelector('.clearbtn')
+let grocery_container = document.querySelector('.gro')
 
 
 submit.addEventListener('click', () => {
     if (input_Field_Container.value.trim().length == '')
         return;
     // console.log(input_Field_Container.value)
+
+    // messages added 
+    const alertkr = document.createElement('div')
+    alertkr.className = 'alert'
+    alertkr.innerText = 'item added'
+    grocery_container.appendChild(alertkr)
+
+
+    setTimeout(() => {
+        grocery_container.removeChild(alertkr)
+    }, 1000)
+
+
 
 
     const todoItemContainer = document.createElement('div')
@@ -30,6 +45,9 @@ submit.addEventListener('click', () => {
     todoText.className = 'todo-text'
     todoText.innerHTML = input_Field_Container.value
     todoItemContainer.appendChild(todoText)
+
+
+
 
 
 
@@ -64,6 +82,25 @@ submit.addEventListener('click', () => {
         input_Field_Container.value = todoText.innerText
         const parent = editButton.parentElement
         parent.parentElement.removeChild(parent)
+
+
+
+
+
+
+        // editing button message
+
+
+        const alertkr = document.createElement('div')
+        alertkr.className = 'alert'
+        alertkr.innerText = 'Edited Item'
+        grocery_container.appendChild(alertkr)
+
+
+        setTimeout(() => {
+            grocery_container.removeChild(alertkr)
+        }, 1000)
+
     })
 
 
@@ -84,11 +121,50 @@ submit.addEventListener('click', () => {
     deleteButton.addEventListener('click', () => {
         const parent = editButton.parentElement
         parent.parentElement.removeChild(parent)
+
+
+        // deleting messages
+        const alertkr = document.createElement('div')
+        alertkr.className = 'alert'
+        alertkr.innerText = 'Delete Item'
+        grocery_container.appendChild(alertkr)
+
+
+        setTimeout(() => {
+            grocery_container.removeChild(alertkr)
+        }, 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
     })
 
 
 
 
+
+
+
+    //  CLEAR ITEM 
+
+    clearBtn.addEventListener('click', (clr) => {
+
+      
+
+
+        todoItemContainer.innerHTML = ''
+
+
+    })
 
 
 
